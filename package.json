@@ -1,0 +1,22 @@
+{
+  "name": "pricingcomponent",
+  "version": "1.0.0",
+  "description": "Challenge from Frontendmentor.io",
+  "main": "app.js",
+  "scripts": {
+    "build": "sass --watch --no-source-map ./sass/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alesvoy/pricingComponent.git"
+  },
+  "author": "Alejandro Butrón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alesvoy/pricingComponent/issues"
+  },
+  "homepage": "https://github.com/Alesvoy/pricingComponent#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
