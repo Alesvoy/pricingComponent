@@ -1,0 +1,16 @@
+.btn {
+  width: 17rem;
+  height: 4.1rem;
+  background: #293355;
+  color: #bdcdfe;
+  padding: 1.2rem 4.6rem;
+  border-radius: 10rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.639rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
