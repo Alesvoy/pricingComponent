@@ -35,7 +35,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  row-gap: 0.8rem;
   align-items: center;
   z-index: 0;
 }
@@ -52,12 +53,16 @@ main {
 .facts__title {
   font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 0.8rem;
 }
 .facts__text {
   font-size: 1.3rem;
   font-weight: 600;
   color: #848eac;
+  text-align: center;
+}
+.facts__text--2 {
+  display: block;
+  text-align: center;
 }
 
 .plan {
@@ -111,6 +116,7 @@ main {
   background-image: url("../../images/icon-slider.svg");
   background-position: center;
   background-repeat: no-repeat;
+  cursor: grabbing;
 }
 .plan__slider__priceContainer {
   display: flex;
@@ -160,6 +166,9 @@ main {
   align-items: center;
   padding: 0.5rem;
 }
+.plan__slider__options__switch:hover {
+  cursor: pointer;
+}
 .plan__line {
   width: 100%;
   height: 1px;
@@ -204,6 +213,84 @@ input[class*=switch__checkbox]:checked {
   margin-left: auto;
 }
 
+@media screen and (min-width: 1440px) {
+  main {
+    background-color: #f9faff;
+  }
+
+  .facts {
+    width: 39.5rem;
+    height: 14.5rem;
+    justify-content: center;
+  }
+  .facts__circles {
+    top: 0;
+    left: 35%;
+  }
+  .facts__title {
+    font-size: 2.4rem;
+  }
+  .facts__text {
+    font-size: 1.5rem;
+    line-height: 2.049rem;
+  }
+  .facts__text--2 {
+    display: inline;
+  }
+
+  .plan {
+    width: 54rem;
+    height: 39.7rem;
+  }
+  .plan__slider__pageviewsContainer {
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    height: 5.5rem;
+    width: 44.4rem;
+    justify-content: space-between;
+  }
+  .plan__slider__price {
+    font-size: 4rem;
+  }
+  .plan__slider__price__monthly {
+    font-size: 1.6rem;
+  }
+  .plan__slider__pageviews {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  .plan__slider__slider {
+    width: 44.4rem;
+  }
+  .plan__slider__options {
+    width: 80%;
+  }
+  .plan__slider__options__text {
+    font-size: 1.2rem;
+  }
+  .plan__slider__options__text--yearly:after {
+    content: "-25% discount";
+  }
+  .plan__line {
+    height: 2.5px;
+    width: 100%;
+  }
+  .plan__benefits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+
+  .benefits__container {
+    margin: 0;
+  }
+  .benefits__submit {
+    width: 17rem;
+  }
+}
 .btn {
   width: 17rem;
   height: 4.1rem;

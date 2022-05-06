@@ -18,7 +18,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  row-gap: 0.8rem;
   align-items: center;
   z-index: 0;
 
@@ -36,13 +37,18 @@ main {
   &__title {
     font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 0.8rem;
   }
 
   &__text {
     font-size: 1.3rem;
     font-weight: 600;
     color: #848eac;
+    text-align: center;
+
+    &--2 {
+      display: block;
+      text-align: center;
+    }
   }
 }
 
@@ -99,6 +105,7 @@ main {
           background-image: url('../../images/icon-slider.svg');
           background-position: center;
           background-repeat: no-repeat;
+          cursor: grabbing;
         }
       }
     }
@@ -156,6 +163,10 @@ main {
         display: flex;
         align-items: center;
         padding: 0.5rem;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -212,5 +223,103 @@ input[class*='switch__checkbox'] {
   &:checked {
     // background: red;
     margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    background-color: #f9faff;
+  }
+
+  .facts {
+    width: 39.5rem;
+    height: 14.5rem;
+    justify-content: center;
+
+    &__circles {
+      top: 0;
+      left: 35%;
+    }
+
+    &__title {
+      font-size: 2.4rem;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      line-height: 2.049rem;
+
+      &--2 {
+        display: inline;
+      }
+    }
+  }
+
+  .plan {
+    width: 54rem;
+    height: 39.7rem;
+
+    &__slider {
+      &__pageviewsContainer {
+        margin: 4rem 0;
+        display: flex;
+        align-items: center;
+        height: 5.5rem;
+        width: 44.4rem;
+        justify-content: space-between;
+      }
+
+      &__price {
+        font-size: 4rem;
+
+        &__monthly {
+          font-size: 1.6rem;
+        }
+      }
+
+      &__pageviews {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+
+      &__slider {
+        width: 44.4rem;
+      }
+
+      &__options {
+        width: 80%;
+
+        &__text {
+          font-size: 1.2rem;
+
+          &--yearly:after {
+            content: '-25% discount';
+          }
+        }
+      }
+    }
+
+    &__line {
+      height: 2.5px;
+      width: 100%;
+    }
+
+    &__benefits {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
+  }
+
+  .benefits {
+    &__container {
+      margin: 0;
+    }
+
+    &__submit {
+      width: 17rem;
+    }
   }
 }
