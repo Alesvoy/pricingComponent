@@ -85,6 +85,7 @@ main {
       height: 0.8rem;
       background: #e7f0fa;
       border-radius: 10rem;
+      position: relative;
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -99,6 +100,8 @@ main {
         border-radius: 10rem;
         -webkit-box-shadow: 0px 20px 30px 0px rgba(14, 216, 196, 0.8);
         box-shadow: 0px 20px 30px 0px rgba(14, 216, 196, 0.8);
+        position: relative;
+        z-index: 1;
 
         &:active {
           background: #23aea0;
@@ -107,6 +110,16 @@ main {
           background-repeat: no-repeat;
           cursor: grabbing;
         }
+      }
+
+      &::before {
+        content: '';
+        width: var(--width, 0%);
+        height: 100%;
+        background: #9bf4ea;
+        position: absolute;
+        border-radius: 10rem 0 0 10rem;
+        z-index: 0;
       }
     }
     &__priceContainer {
@@ -163,6 +176,7 @@ main {
         display: flex;
         align-items: center;
         padding: 0.5rem;
+        transition: all 0.2s ease-in;
 
         &:hover {
           cursor: pointer;

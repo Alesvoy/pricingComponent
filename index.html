@@ -35,26 +35,26 @@
       <section class="plan">
         <div class="plan__slider">
           <div class="plan__slider__pageviewsContainer">
-            <h3 class="plan__slider__pageviews">100K Pageviews</h3>
+            <h3 class="plan__slider__pageviews"><span id="pageViews">100K</span> Pageviews</h3>
             <div
               class="plan__slider__priceContainer plan__slider__priceContainer--1"
             >
-              <h1 class="plan__slider__price">$16.00</h1>
+              <h1 class="plan__slider__price" id="planPrice--1">$16.00</h1>
               <p class="plan__slider__price__monthly">/ month</p>
             </div>
           </div>
           <input
-            type="range"
-            min="1"
-            max="100"
-            value="50"
-            class="plan__slider__slider"
-            id="slider"
-          />
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="plan__slider__slider"
+              id="slider"
+            />
           <div
             class="plan__slider__priceContainer plan__slider__priceContainer--2 hide"
           >
-            <h1 class="plan__slider__price">$16.00</h1>
+            <h1 class="plan__slider__price" id="planPrice--2">$16.00</h1>
             <p class="plan__slider__price__monthly">/ month</p>
           </div>
           <div class="plan__slider__options">
@@ -104,5 +104,6 @@
         </div>
       </section>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
